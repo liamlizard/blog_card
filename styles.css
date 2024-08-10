@@ -1,3 +1,8 @@
+@font-face {
+   font-family: 'font';
+   src: url(assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+}
+
 :root {
    --clr-yellow: hsl(47, 88%, 63%);
    --clr-white: hsl(0, 0%, 100%);
@@ -10,34 +15,36 @@ html, body {
    min-height: 100vh;
    padding: 0px;
    margin: 0px;
-   font-family: figtree;
+   font-family: 'font';
 }
 
 body {
    display: grid;
-   justify-content: center;
-   align-items: center;
+   place-items: center;
    background-color: var(--clr-yellow);
 }
 
 main {
    display: flex;
    flex-direction: column;
-   flex-flow: space-around;
-
-   border-radius: var(--brd-rad-size);
+   justify-content: space-around;
 
    padding: 20px;
+
    background-color: var(--clr-white);
+
    border: 2px, solid, var(--clr-grey-950);
+   border-radius: var(--brd-rad-size);
 }
 
 .main-image {
+   height: 200px;
+   width: 300px;
    border-radius: var(--brd-rad-size);
 }
 
 .learning-container {
-   display:flex;
+   display: flex;
    align-items: center;
    justify-content: center;
    width: 25%;
@@ -49,19 +56,38 @@ main {
 }
 
 .profile {
+   width: 320px;
    display: flex;
    flex-direction: row;
+   align-items: center;
+}
+
+.profile img {
+   height: 38px;
 }
 
 .profile h2 {
-   padding-left: 20px;
+   padding-left: 10px;
+   font-size: 16px;
+}
+
+h1 {
+   font-size: 26px;
 }
 
 h1, h2, h3 {
+   width: 320px;
    color: var(--clr-grey-950);
 }
 
+h1:hover {
+   color: var(--clr-yellow);
+   cursor: pointer;
+}
+
 p {
+   width: 320px;
+   font-size: 16px;
    color: var(--clr-grey-500)
 }
 
@@ -70,5 +96,5 @@ p {
    height: 40%;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution {width: 320px; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
